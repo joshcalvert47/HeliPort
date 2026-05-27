@@ -2114,7 +2114,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buscar actualizaciones automáticamente."
+            "value" : "Buscar actualizaciones automáticamente"
           }
         },
         "id" : {
@@ -2191,7 +2191,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Descargar actualizaciones automáticamente."
+            "value" : "Descargar actualizaciones automáticamente"
           }
         },
         "id" : {
@@ -2359,6 +2359,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
+          }
+        }
+      }
+    },
+    "Captures detailed driver and firmware logs." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Captura logs del driver y del firmware."
           }
         }
       }
@@ -2617,6 +2628,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conectado"
+          }
+        }
+      }
+    },
+    "Continue Anyway" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar Igualmente"
           }
         }
       }
@@ -3988,6 +4010,17 @@
         }
       }
     },
+    "Generates a comprehensive system report for debugging." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genera informe del sistema para depuración."
+          }
+        }
+      }
+    },
     "Get Wi-Fi Status" : {
       "localizations" : {
         "es" : {
@@ -5024,6 +5057,17 @@
         }
       }
     },
+    "Moving HeliPort to the Applications folder is recommended for full functionality." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es recomendable mover Heliport a la carpeta Aplicaciones para su funcionamiento pleno."
+          }
+        }
+      }
+    },
     "Network Name" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -6035,6 +6079,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "打开无线诊断..."
+          }
+        }
+      }
+    },
+    "Opens the native macOS Wireless Diagnostics tool." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre la herramienta Diagnóstico Wireless de macOS"
           }
         }
       }
@@ -7138,6 +7193,17 @@
         }
       }
     },
+    "Show live bitrate in menu bar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar tráfico en la barra de menús"
+          }
+        }
+      }
+    },
     "Show password" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -7247,6 +7313,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "显示密码"
+          }
+        }
+      }
+    },
+    "Show signal as percentage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar señal como porcentaje"
           }
         }
       }
@@ -7991,7 +8068,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Usa estas herramientas para investigar problemas de conexión o generar información para informes de fallos."
+            "value" : "Usa estas herramientas para investigar problemas o generar informes de fallos."
           }
         }
       }
