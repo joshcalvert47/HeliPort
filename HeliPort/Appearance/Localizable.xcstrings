@@ -4128,7 +4128,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HeliPort ejecutándose desde una dirección inesperada"
+            "value" : "HeliPort está ejecutándose desde una dirección inesperada"
           }
         },
         "fr" : {
@@ -7277,7 +7277,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cambiar apariencia requiere reinicar la aplicación para que tenga efecto."
+            "value" : "Cambiar apariencia requiere reiniciar la aplicación para que tenga efecto."
           }
         },
         "zh-Hans" : {
