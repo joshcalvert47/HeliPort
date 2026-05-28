@@ -628,4 +628,14 @@ extension String {
         static let joinNetworks = NSLocalizedString("Other...")
         static let wifiSettings = NSLocalizedString("Wi-Fi Settings...")
     }
+
+    enum Dashboard {
+        static let connected = NSLocalizedString("Connected")
+        static let signalStrength = NSLocalizedString("SIGNAL STRENGTH")
+        static let ipAddress = NSLocalizedString("IP Address")
+        static let router = NSLocalizedString("Router")
+        static let channel = NSLocalizedString("Channel")
+        static let phyMode = NSLocalizedString("PHY Mode")
+        static let noise = NSLocalizedString("Noise")
+    }
 }
