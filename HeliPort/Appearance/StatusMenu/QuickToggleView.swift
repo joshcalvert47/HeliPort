@@ -4,7 +4,7 @@ struct QuickToggleView: View {
     @Binding var isOn: Bool
     let title: String
     var onToggle: (Bool) -> Void
-    
+
     var body: some View {
         HStack {
             Text(title)
@@ -29,7 +29,7 @@ class ModernToggleMenuItem: NSMenuItem {
         self.view = NSHostingView(rootView: view)
         self.view?.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 44)
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

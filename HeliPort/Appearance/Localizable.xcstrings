@@ -2114,7 +2114,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Buscar actualizaciones automáticamente."
+            "value" : "Buscar actualizaciones automáticamente"
           }
         },
         "id" : {
@@ -2191,7 +2191,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Descargar actualizaciones automáticamente."
+            "value" : "Descargar actualizaciones automáticamente"
           }
         },
         "id" : {
@@ -2359,6 +2359,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
+          }
+        }
+      }
+    },
+    "Captures detailed driver and firmware logs." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Captura logs del driver y del firmware."
           }
         }
       }
@@ -2612,10 +2623,35 @@
       }
     },
     "Connected" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conectado"
+          }
+        }
+      }
+    },
+    "Continue Anyway" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continuar Igualmente"
+          }
+        }
+      }
     },
     "Copy SSID" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copiar SSID"
+          }
+        }
+      }
     },
     "Could not create zip file for generated logs." : {
       "extractionState" : "manual",
@@ -2757,7 +2793,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear Informe de Diagnósticos..."
+            "value" : "Crear Informe de Diagnóstico..."
           }
         },
         "fr" : {
@@ -2948,7 +2984,14 @@
       }
     },
     "Diagnostics & Debugging" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diagnóstico y Depuración"
+          }
+        }
+      }
     },
     "Disconnect from " : {
       "extractionState" : "manual",
@@ -3622,7 +3665,14 @@
       }
     },
     "Enter the password for this network." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Introduce contraseña para esta red."
+          }
+        }
+      }
     },
     "Error occurred while generating bug report." : {
       "extractionState" : "manual",
@@ -3761,7 +3811,14 @@
       }
     },
     "Forget Network" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Olvidar Red"
+          }
+        }
+      }
     },
     "FUNCTION NOT IMPLEMENTED" : {
       "extractionState" : "manual",
@@ -3953,8 +4010,26 @@
         }
       }
     },
+    "Generates a comprehensive system report for debugging." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Genera informe del sistema para depuración."
+          }
+        }
+      }
+    },
     "Get Wi-Fi Status" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado de Wi-Fi"
+          }
+        }
+      }
     },
     "HeliPort API Version: " : {
       "extractionState" : "manual",
@@ -4086,7 +4161,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "HeliPort ejecutándose desde una dirección inesperada"
+            "value" : "HeliPort está ejecutándose desde una dirección inesperada"
           }
         },
         "fr" : {
@@ -4657,7 +4732,14 @@
       }
     },
     "Join \"%@\"" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unirse a “ %@“"
+          }
+        }
+      }
     },
     "Join Other Network..." : {
       "extractionState" : "manual",
@@ -4775,6 +4857,12 @@
     "Known Network" : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Red Conocida"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4786,6 +4874,12 @@
     "Known Networks" : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redes Conocidas"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4954,7 +5048,25 @@
       }
     },
     "Mbps" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mbps"
+          }
+        }
+      }
+    },
+    "Moving HeliPort to the Applications folder is recommended for full functionality." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es recomendable mover Heliport a la carpeta Aplicaciones para su funcionamiento pleno."
+          }
+        }
+      }
     },
     "Network Name" : {
       "extractionState" : "manual",
@@ -5888,7 +6000,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir Diagnósticos de Red Inalámbrica..."
+            "value" : "Abrir Diagnóstico de Red Inalámbrica..."
           }
         },
         "fr" : {
@@ -5971,9 +6083,26 @@
         }
       }
     },
+    "Opens the native macOS Wireless Diagnostics tool." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre la herramienta Diagnóstico Wireless de macOS"
+          }
+        }
+      }
+    },
     "Other Networks" : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otras Redes"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5985,6 +6114,12 @@
     "Other..." : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otras…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -6719,7 +6854,14 @@
       }
     },
     "Required" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Requerido"
+          }
+        }
+      }
     },
     "Restart" : {
       "extractionState" : "manual",
@@ -6739,7 +6881,14 @@
       }
     },
     "Returns the current connection status and network name." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Devuelve estado actual de la conexión y nombre de red."
+          }
+        }
+      }
     },
     "Saved Networks:" : {
       "extractionState" : "manual",
@@ -7044,6 +7193,17 @@
         }
       }
     },
+    "Show live bitrate in menu bar" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar tráfico en la barra de menús"
+          }
+        }
+      }
+    },
     "Show password" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -7157,11 +7317,36 @@
         }
       }
     },
+    "Show signal as percentage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar señal como porcentaje"
+          }
+        }
+      }
+    },
     "Signal" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Señal"
+          }
+        }
+      }
     },
     "SIGNAL STRENGTH" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "INTENSIDAD DE SEÑAL"
+          }
+        }
+      }
     },
     "Switching appearance requires a restart of the application to take effect." : {
       "extractionState" : "manual",
@@ -7169,7 +7354,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Cambiar apariencia requiere reinicar la aplicación para que tenga efecto."
+            "value" : "Cambiar apariencia requiere reiniciar la aplicación para que tenga efecto."
           }
         },
         "zh-Hans" : {
@@ -7210,7 +7395,14 @@
       }
     },
     "Time" : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tiempo"
+          }
+        }
+      }
     },
     "Turn Wi-Fi Off" : {
       "extractionState" : "manual",
@@ -7872,7 +8064,14 @@
       }
     },
     "Use these tools to troubleshoot connection issues or generate information for bug reports." : {
-
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa estas herramientas para investigar problemas o generar informes de fallos."
+          }
+        }
+      }
     },
     "Username:" : {
       "extractionState" : "manual",
@@ -8756,6 +8955,12 @@
     "Wi-Fi Settings..." : {
       "extractionState" : "manual",
       "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes de Wi-Fi…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",

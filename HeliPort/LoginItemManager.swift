@@ -19,33 +19,21 @@ import ServiceManagement
 class LoginItemManager {
 
     private static let launcherId = Bundle.main.bundleIdentifier! + "-Launcher"
+    private static let launcherService = SMAppService.loginItem(identifier: launcherId)
 
     public class func isEnabled() -> Bool {
-
-        guard let jobs =
-            (LoginItemManager.self as DeprecationWarningWorkaround.Type).jobsDict
-        else {
-            return false
-        }
-
-        let job = jobs.first { $0["Label"] as? String? == launcherId }
-
-        return job?["OnDemand"] as? Bool ?? false
+        launcherService.status == .enabled
     }
 
     public class func setStatus(enabled: Bool) {
-        SMLoginItemSetEnabled(launcherId as CFString, enabled)
-    }
-}
-
-private protocol DeprecationWarningWorkaround {
-    static var jobsDict: [[String: AnyObject]]? { get }
-}
-
-extension LoginItemManager: DeprecationWarningWorkaround {
-    // Workaround to silence "'SMCopyAllJobDictionaries' was deprecated in OS X 10.10" warning
-    @available(*, deprecated)
-    static var jobsDict: [[String: AnyObject]]? {
-        SMCopyAllJobDictionaries(kSMDomainUserLaunchd)?.takeRetainedValue() as? [[String: AnyObject]]
+        do {
+            if enabled {
+                try launcherService.register()
+            } else {
+                try launcherService.unregister()
+            }
+        } catch {
+            Log.error("Failed to update launch-at-login status: \(error.localizedDescription)")
+        }
     }
 }

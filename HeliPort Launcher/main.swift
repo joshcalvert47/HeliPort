@@ -30,7 +30,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         let pathComponents = (Bundle.main.bundlePath as NSString).pathComponents
         let mainPath = NSString.path(withComponents: Array(pathComponents[0...(pathComponents.count - 5)]))
-        NSWorkspace.shared.launchApplication(mainPath)
+        NSWorkspace.shared.openApplication(
+            at: URL(fileURLWithPath: mainPath),
+            configuration: NSWorkspace.OpenConfiguration(),
+            completionHandler: nil
+        )
         NSApp.terminate(nil)
     }
 }

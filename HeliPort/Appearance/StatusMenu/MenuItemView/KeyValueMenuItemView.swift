@@ -57,7 +57,10 @@ class KeyValueMenuItemView: HidableMenuItemView {
             keyLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: inset.rawValue),
             valueLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             valueLabel.leadingAnchor.constraint(equalTo: keyLabel.trailingAnchor),
-            valueLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -HeliPortUI.Spacing.menuHorizontalPadding)
+            valueLabel.trailingAnchor.constraint(
+                equalTo: trailingAnchor,
+                constant: -HeliPortUI.Spacing.menuHorizontalPadding
+            )
         ])
     }
 

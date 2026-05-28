@@ -308,7 +308,10 @@ extension PrefsSavedNetworksView: NSTableViewDataSource {
                    dropOperation: NSTableView.DropOperation) -> Bool {
         let pasteBoard = info.draggingPasteboard
         if let itemData = pasteBoard.pasteboardItems?.first?.data(forType: .rowOrder),
-            let indexes = NSKeyedUnarchiver.unarchiveObject(with: itemData) as? IndexSet,
+            let indexes = try? NSKeyedUnarchiver.unarchivedObject(
+                ofClass: NSIndexSet.self,
+                from: itemData
+            ) as IndexSet?,
             let originalRow = indexes.first {
 
             var newRow = row
@@ -335,7 +338,12 @@ extension PrefsSavedNetworksView: NSTableViewDataSource {
     // Allows drag operation
 
     func tableView(_ tableView: NSTableView, writeRowsWith rowIndexes: IndexSet, to pboard: NSPasteboard) -> Bool {
-        let data = NSKeyedArchiver.archivedData(withRootObject: rowIndexes)
+        guard let data = try? NSKeyedArchiver.archivedData(
+            withRootObject: rowIndexes,
+            requiringSecureCoding: false
+        ) else {
+            return false
+        }
         let item = NSPasteboardItem()
         item.setData(data, forType: .rowOrder)
         pboard.writeObjects([item])

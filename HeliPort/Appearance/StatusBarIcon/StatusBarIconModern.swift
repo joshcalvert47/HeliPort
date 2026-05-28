@@ -24,8 +24,12 @@ class StatusBarIconModern: StatusBarIconProvider {
     }
     var off: NSImage { return NSImage(systemSymbolName: "wifi.slash", accessibilityDescription: "WiFi Off")! }
     var connected: NSImage { return NSImage(systemSymbolName: "wifi", accessibilityDescription: "WiFi On")! }
-    var disconnected: NSImage { return NSImage(systemSymbolName: "wifi", accessibilityDescription: "WiFi Disconnected")! }
-    var warning: NSImage { return NSImage(systemSymbolName: "wifi.exclamationmark", accessibilityDescription: "WiFi Warning")! }
+    var disconnected: NSImage {
+        return NSImage(systemSymbolName: "wifi", accessibilityDescription: "WiFi Disconnected")!
+    }
+    var warning: NSImage {
+        return NSImage(systemSymbolName: "wifi.exclamationmark", accessibilityDescription: "WiFi Warning")!
+    }
     var scanning: [NSImage] {
         return [
             NSImage(systemSymbolName: "wifi", accessibilityDescription: "Scanning")!,
