@@ -2793,7 +2793,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear Informe de Diagnósticos..."
+            "value" : "Crear Informe de Diagnóstico..."
           }
         },
         "fr" : {
@@ -6000,7 +6000,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir Diagnósticos de Red Inalámbrica..."
+            "value" : "Abrir Diagnóstico de Red Inalámbrica..."
           }
         },
         "fr" : {
