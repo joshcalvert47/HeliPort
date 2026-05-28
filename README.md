@@ -44,7 +44,7 @@ The following types of "Issues" will be considered as invalid and will be closed
 - Duplicated issues
 - Urging updates
 - Spam
-- Non-English or non-Chinese content
+- Non-English content
 - Easy "Googleable" questions
   > How to build etc.
 - Off-topic discussion
