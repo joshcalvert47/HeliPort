@@ -217,7 +217,7 @@ struct PrefsDebugView: View {
                 .disabled(true)
 
                 DebugActionButton(
-                    title: "Create Diagnostics Report",
+                    title: "Create Diagnostics Report...",
                     icon: "doc.text.fill",
                     description: "Generates a comprehensive system report for debugging.",
                     isLoading: isGeneratingReport
@@ -232,7 +232,7 @@ struct PrefsDebugView: View {
                 }
 
                 DebugActionButton(
-                    title: "Open Wireless Diagnostics",
+                    title: "Open Wireless Diagnostics...",
                     icon: "stethoscope",
                     description: "Opens the native macOS Wireless Diagnostics tool."
                 ) {
@@ -255,9 +255,9 @@ struct PrefsDebugView: View {
 }
 
 struct DebugActionButton: View {
-    let title: String
+    let title: LocalizedStringKey
     let icon: String
-    let description: String
+    let description: LocalizedStringKey
     var isLoading: Bool = false
     let action: () -> Void
 
