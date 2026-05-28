@@ -163,8 +163,11 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
         addItem(knownSectionItem)
 
         // Dashboard
-        currentNetworkItem.view = NSHostingView(rootView: NetworkDetailsDashboard(viewModel: dashboardViewModel))
-        currentNetworkItem.view?.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 260)
+        let dashboardView = NSHostingView(rootView: NetworkDetailsDashboard(viewModel: dashboardViewModel))
+        dashboardView.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 1)
+        dashboardView.layoutSubtreeIfNeeded()
+        dashboardView.frame.size.height = ceil(dashboardView.fittingSize.height)
+        currentNetworkItem.view = dashboardView
         addItem(currentNetworkItem)
 
         addItem(otherSectionItem)
