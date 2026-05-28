@@ -60,7 +60,7 @@ class WiFiConfigWindow: NSWindow {
         )
 
         self.contentView = NSHostingView(rootView: rootView)
-        
+
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
 
@@ -106,4 +106,3 @@ enum ErrorState: String {
         return NSLocalizedString(self.rawValue)
     }
 }
-

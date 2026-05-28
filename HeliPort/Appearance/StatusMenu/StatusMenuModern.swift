@@ -18,14 +18,14 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
             get: { self.isNetworkCardEnabled },
             set: { self.isWiFiOn = $0 }
         )
-        return ModernToggleMenuItem(title: String.Modern.wifi, isOn: binding) { newValue in
-             // power state is handled by binding
+        return ModernToggleMenuItem(title: String.Modern.wifi, isOn: binding) { _ in
+              // power state is handled by binding
         }
     }()
 
     private var isOtherExpanded: Bool = false {
         didSet {
-            self.otherNetworkItemList.forEach { 
+            self.otherNetworkItemList.forEach {
                 if $0.isEnabled { $0.isHidden = !isOtherExpanded }
             }
             self.manuallyJoinItem.isHidden = !isOtherExpanded
@@ -46,11 +46,17 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
         return ModernSectionHeaderItem(title: String.Modern.otherNetworks, isExpanded: binding)
     }()
 
-    private lazy var manuallyJoinItem = ModernActionMenuItem(title: String.Modern.joinNetworks, icon: "plus") { [weak self] in
+    private lazy var manuallyJoinItem = ModernActionMenuItem(
+        title: String.Modern.joinNetworks,
+        icon: "plus"
+    ) { [weak self] in
         self?.clickMenuItem(NSMenuItem(title: String.Modern.joinNetworks, action: nil, keyEquivalent: ""))
     }
-    
-    private lazy var networkPanelItem = ModernActionMenuItem(title: String.Modern.wifiSettings, icon: "gearshape") { [weak self] in
+
+    private lazy var networkPanelItem = ModernActionMenuItem(
+        title: String.Modern.wifiSettings,
+        icon: "gearshape"
+    ) { [weak self] in
         self?.clickMenuItem(NSMenuItem(title: String.Modern.wifiSettings, action: nil, keyEquivalent: ""))
     }
 
@@ -153,44 +159,44 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
     func setupMenu() {
         addItem(statusItem)
         addItem(.separator())
-        
+
         addItem(knownSectionItem)
-        
+
         // Dashboard
         currentNetworkItem.view = NSHostingView(rootView: NetworkDetailsDashboard(viewModel: dashboardViewModel))
         currentNetworkItem.view?.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 260)
         addItem(currentNetworkItem)
-        
+
         addItem(otherSectionItem)
         addItem(manuallyJoinItem)
-        
+
         addItem(networkItemListSeparator)
-        
+
         addItem(networkPanelItem)
 
         addItem(.separator())
-        
+
         addItem(ModernActionMenuItem(title: String.aboutHeliport, icon: "info.circle") { [weak self] in
             self?.clickMenuItem(self?.aboutItem ?? NSMenuItem())
         })
-        
+
         addItem(ModernActionMenuItem(title: String.checkUpdates, icon: "arrow.triangle.2.circlepath") {
             UpdateManager.sharedController?.checkForUpdates(nil)
         })
-        
+
         addItem(quitSeparator)
-        
+
         addItem(ModernActionMenuItem(title: String.quitHeliport, icon: "power", shortcut: "q") { [weak self] in
             self?.clickMenuItem(self?.quitItem ?? NSMenuItem())
         })
-        
+
         // Technical & Hidden items at the bottom (only shown with Option key)
         addItem(.separator())
-        
+
         [bsdItem_, macItem_, itlwmVerItem_].forEach {
             addItem($0)
         }
-        
+
         stationInfoItems.forEach {
             addItem($0)
         }
@@ -218,14 +224,20 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
             DispatchQueue.main.async {
                 (self.otherSectionItem as? ModernSectionHeaderItem)?.isScanning = false
                 (self.knownSectionItem as? ModernSectionHeaderItem)?.isScanning = false
-                
+
                 self.isNetworkListEmpty = networkListSize == 0 && !self.isNetworkConnected
-                
+
                 let showKnown = !knownList.isEmpty || self.isNetworkConnected
                 self.knownSectionItem.isHidden = !showKnown
-                
-                let knownTitle = knownList.count > (self.isNetworkConnected ? 0 : 1) ? String.Modern.knownNetworks : String.Modern.knownNetwork
-                (self.knownSectionItem.view as? NSHostingView<SectionHeaderView>)?.rootView = SectionHeaderView(title: knownTitle, isExpandable: false, isExpanded: .constant(true))
+
+                let knownTitle = knownList.count > (self.isNetworkConnected ? 0 : 1)
+                    ? String.Modern.knownNetworks
+                    : String.Modern.knownNetwork
+                (self.knownSectionItem.view as? NSHostingView<SectionHeaderView>)?.rootView = SectionHeaderView(
+                    title: knownTitle,
+                    isExpandable: false,
+                    isExpanded: .constant(true)
+                )
 
                 let staInfo: NetworkInfo? = (self.isNetworkConnected
                                              ? NetworkInfo(ssid: self.currentSSID ?? "")
@@ -234,20 +246,21 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
                 let insertAtKnown = self.index(of: self.currentNetworkItem) + 1
                 self.processNetworkList(from: knownList, to: &self.knownNetworkItemList,
                                         insertAt: insertAtKnown, staInfo)
-                
-                // Keep other section visible if there are networks OR if we have no known networks (to allow manual join)
+
+                // Keep other section visible if there are networks
+                // or if we have no known networks (for manual join)
                 self.otherSectionItem.isHidden = otherList.isEmpty && !self.isOtherExpanded && showKnown
-                
+
                 let insertAtOther = self.index(of: self.otherSectionItem) + 1
                 self.processNetworkList(from: otherList, to: &self.otherNetworkItemList,
                                         insertAt: insertAtOther,
                                         staInfo, hidden: !self.isOtherExpanded)
-                
+
                 self.manuallyJoinItem.isHidden = !self.isOtherExpanded
-                
+
                 // Show separator if anything was shown in the network sections
                 self.networkItemListSeparator.isHidden = !showKnown && self.otherSectionItem.isHidden
-                
+
                 self.update()
             }
         }
@@ -265,19 +278,18 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
         super.menuWillOpen(menu)
 
         guard isNetworkCardEnabled else { return }
-        
+
         let hasSavedNetworks = !CredentialsManager.instance.getSavedNetworkSSIDs().isEmpty
         let expandOther = !self.isNetworkConnected && !hasSavedNetworks && self.knownNetworkItemList.isEmpty
-        
+
         self.isOtherExpanded = expandOther
     }
-
 
     override func addNetworkItem(_ item: NSMenuItem = HPMenuItem(highlightable: true),
                                  insertAt: Int? = nil,
                                  hidden: Bool = false,
                                  networkInfo: NetworkInfo = NetworkInfo(ssid: "placeholder")) -> NSMenuItem {
-        
+
         let newItem = ModernNetworkMenuItem(
             ssid: networkInfo.ssid,
             signalStrength: Int(networkInfo.rssi),
@@ -287,15 +299,15 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
             NetworkManager.connect(networkInfo: networkInfo, saveNetwork: true)
             self.cancelTracking()
         }
-        
+
         newItem.isHidden = hidden
-        
+
         // Only call super if we actually want to insert it into the menu at a specific position.
         // Otherwise, just return the constructed item (e.g. for processNetworkList reuse logic).
         guard let insertAt = insertAt else {
             return newItem
         }
-        
+
         return super.addNetworkItem(newItem, insertAt: insertAt, hidden: hidden, networkInfo: networkInfo)
     }
 
@@ -334,9 +346,9 @@ struct ActionItemView: View {
     let icon: String?
     let shortcut: String?
     let action: () -> Void
-    
+
     @State private var isHovered = false
-    
+
     var body: some View {
         HStack(spacing: HeliPortUI.Spacing.medium) {
             if let icon = icon {
@@ -345,13 +357,13 @@ struct ActionItemView: View {
                     .foregroundColor(.primary.opacity(0.8))
                     .frame(width: 18)
             }
-            
+
             Text(title)
                 .font(.system(size: 13, weight: .medium, design: .rounded))
                 .foregroundColor(.primary)
-            
+
             Spacer()
-            
+
             if let shortcut = shortcut {
                 Text(shortcut)
                     .font(.system(size: 11, weight: .medium, design: .monospaced))
@@ -379,22 +391,22 @@ class ModernActionMenuItem: NSMenuItem {
         self.onSelect = action
         super.init(title: title, action: #selector(itemAction), keyEquivalent: shortcut ?? "")
         self.target = self
-        
+
         let view = ActionItemView(title: title, icon: icon, shortcut: shortcutDisplay(shortcut), action: action)
         self.view = NSHostingView(rootView: view)
         self.view?.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 36)
     }
-    
+
     private func shortcutDisplay(_ shortcut: String?) -> String? {
         guard let shortcut = shortcut else { return nil }
         if shortcut == "q" { return "⌘Q" }
         return shortcut.uppercased()
     }
-    
+
     @objc private func itemAction() {
         onSelect()
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -406,23 +418,23 @@ struct SectionHeaderView: View {
     @Binding var isExpanded: Bool
     var isScanning: Bool = false
     var onExpand: ((Bool) -> Void)?
-    
+
     var body: some View {
         HStack(spacing: 8) {
             Text(title.uppercased())
                 .font(.system(size: 10, weight: .black))
                 .foregroundColor(.secondary.opacity(0.6))
                 .tracking(0.5)
-            
+
             if isScanning {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
                     .scaleEffect(0.4)
                     .frame(width: 12, height: 12)
             }
-            
+
             Spacer()
-            
+
             if isExpandable {
                 Image(systemName: "chevron.right")
                     .font(.system(size: 10, weight: .bold))
@@ -449,26 +461,37 @@ class ModernSectionHeaderItem: NSMenuItem {
     private var headerTitle: String
     private var canExpand: Bool
     private var onExpand: ((Bool) -> Void)?
-    
+
     var isScanning: Bool = false {
         didSet {
-            let view = SectionHeaderView(title: headerTitle, isExpandable: canExpand, isExpanded: isExpandedBinding, isScanning: isScanning, onExpand: onExpand)
+            let view = SectionHeaderView(
+                title: headerTitle,
+                isExpandable: canExpand,
+                isExpanded: isExpandedBinding,
+                isScanning: isScanning,
+                onExpand: onExpand
+            )
             (self.view as? NSHostingView<SectionHeaderView>)?.rootView = view
         }
     }
-    
+
     init(title: String, isExpanded: Binding<Bool>, isExpandable: Bool = true, onExpand: ((Bool) -> Void)? = nil) {
         self.isExpandedBinding = isExpanded
         self.headerTitle = title
         self.canExpand = isExpandable
         self.onExpand = onExpand
         super.init(title: title, action: nil, keyEquivalent: "")
-        
-        let view = SectionHeaderView(title: title, isExpandable: isExpandable, isExpanded: isExpanded, onExpand: onExpand)
+
+        let view = SectionHeaderView(
+            title: title,
+            isExpandable: isExpandable,
+            isExpanded: isExpanded,
+            onExpand: onExpand
+        )
         self.view = NSHostingView(rootView: view)
         self.view?.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 32)
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -483,15 +506,15 @@ struct KeyValueItemView: View {
     let key: String
     @ObservedObject var viewModel: KeyValueViewModel
     let inset: Bool
-    
+
     var body: some View {
         HStack {
             Text(key)
                 .font(.system(size: 11, weight: .bold, design: .rounded))
                 .foregroundColor(.secondary)
-            
+
             Spacer()
-            
+
             Text(viewModel.value)
                 .font(.system(size: 11, weight: .semibold, design: .monospaced))
                 .foregroundColor(.primary.opacity(0.8))
@@ -503,21 +526,21 @@ struct KeyValueItemView: View {
 
 class ModernKeyValueItem: NSMenuItem {
     private let viewModel: KeyValueViewModel
-    
+
     var value: String {
         get { viewModel.value }
         set { viewModel.value = newValue }
     }
-    
+
     init(key: String, value: String, inset: Bool = false) {
         self.viewModel = KeyValueViewModel(value: value)
         super.init(title: key, action: nil, keyEquivalent: "")
-        
+
         let view = KeyValueItemView(key: key, viewModel: viewModel, inset: inset)
         self.view = NSHostingView(rootView: view)
         self.view?.frame = NSRect(x: 0, y: 0, width: HeliPortUI.Dashboard.width, height: 24)
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

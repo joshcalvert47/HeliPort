@@ -194,18 +194,18 @@ private extension String {
 
 struct PrefsDebugView: View {
     @State private var isGeneratingReport = false
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             Text("Diagnostics & Debugging")
                 .font(.headline)
-            
+
             Text("Use these tools to troubleshoot connection issues or generate information for bug reports.")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
-            
+
             Divider()
-            
+
             VStack(spacing: 12) {
                 DebugActionButton(
                     title: "Enable Wi-Fi Logging",
@@ -215,7 +215,7 @@ struct PrefsDebugView: View {
                     // Not implemented in driver yet according to StatusMenuLegacy
                 }
                 .disabled(true)
-                
+
                 DebugActionButton(
                     title: "Create Diagnostics Report",
                     icon: "doc.text.fill",
@@ -230,16 +230,23 @@ struct PrefsDebugView: View {
                         }
                     }
                 }
-                
+
                 DebugActionButton(
                     title: "Open Wireless Diagnostics",
                     icon: "stethoscope",
                     description: "Opens the native macOS Wireless Diagnostics tool."
                 ) {
-                    NSWorkspace.shared.launchApplication("Wireless Diagnostics")
+                    let appURL = URL(
+                        fileURLWithPath: "/System/Library/CoreServices/Applications/Wireless Diagnostics.app"
+                    )
+                    NSWorkspace.shared.openApplication(
+                        at: appURL,
+                        configuration: NSWorkspace.OpenConfiguration(),
+                        completionHandler: nil
+                    )
                 }
             }
-            
+
             Spacer()
         }
         .padding(30)
@@ -253,7 +260,7 @@ struct DebugActionButton: View {
     let description: String
     var isLoading: Bool = false
     let action: () -> Void
-    
+
     var body: some View {
         Button(action: action) {
             HStack(spacing: 12) {
@@ -261,7 +268,7 @@ struct DebugActionButton: View {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color.accentColor.opacity(0.1))
                         .frame(width: 40, height: 40)
-                    
+
                     if isLoading {
                         ProgressView()
                             .scaleEffect(0.8)
@@ -271,7 +278,7 @@ struct DebugActionButton: View {
                             .foregroundColor(.accentColor)
                     }
                 }
-                
+
                 VStack(alignment: .leading, spacing: 2) {
                     Text(title)
                         .font(.system(size: 13, weight: .semibold))
@@ -279,9 +286,9 @@ struct DebugActionButton: View {
                         .font(.system(size: 11))
                         .foregroundColor(.secondary)
                 }
-                
+
                 Spacer()
-                
+
                 Image(systemName: "chevron.right")
                     .font(.system(size: 10, weight: .bold))
                     .foregroundColor(.secondary.opacity(0.3))

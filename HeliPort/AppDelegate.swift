@@ -28,7 +28,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         checkAPI()
 
         // Initialize Sparkle
-        let controller = SPUStandardUpdaterController(startingUpdater: true, updaterDelegate: updaterDelegate, userDriverDelegate: nil)
+        let controller = SPUStandardUpdaterController(
+            startingUpdater: true,
+            updaterDelegate: updaterDelegate,
+            userDriverDelegate: nil
+        )
         self.updaterController = controller
 
         let statusBar = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
@@ -37,7 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         _ = StatusBarIcon.shared(statusBar: statusBar, icons: iconProvider)
 
         statusBar.menu = StatusMenuModern()
-        
+
         promptForLaunchAtLogin()
     }
 
@@ -88,11 +92,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         Log.error("Running path unexpected!")
 
-        let alert = CriticalAlert(message: NSLocalizedString("HeliPort running at an unexpected path"),
-                                  informativeText: NSLocalizedString("Moving HeliPort to the Applications folder is recommended for full functionality."),
+        let alert = CriticalAlert(
+            message: NSLocalizedString("HeliPort running at an unexpected path"),
+            informativeText: NSLocalizedString(
+                "Moving HeliPort to the Applications folder is recommended for full functionality."
+            ),
                                   options: [NSLocalizedString("Continue Anyway"),
-                                            NSLocalizedString("Quit HeliPort")])
-        
+                                            NSLocalizedString("Quit HeliPort")]
+        )
+
         if alert.show() == .alertSecondButtonReturn {
             NSApp.terminate(nil)
         }
@@ -106,7 +114,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             let alert = NSAlert()
             alert.messageText = NSLocalizedString("Launch HeliPort at Login?")
-            alert.informativeText = NSLocalizedString("Would you like HeliPort to start automatically when you log in to your Mac?")
+            alert.informativeText = NSLocalizedString(
+                "Would you like HeliPort to start automatically when you log in to your Mac?"
+            )
             alert.addButton(withTitle: NSLocalizedString("Enable"))
             alert.addButton(withTitle: NSLocalizedString("Not Now"))
             alert.alertStyle = .informational

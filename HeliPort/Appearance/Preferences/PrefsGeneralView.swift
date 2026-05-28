@@ -68,11 +68,6 @@ class PrefsGeneralView: NSView {
         checkbox.state = LoginItemManager.isEnabled() ? .on : .off
         return checkbox
     }()
-
-
-
-
-
     let gridView: NSGridView = {
         let view = NSGridView()
         view.setContentHuggingPriority(.init(rawValue: 600), for: .horizontal)
@@ -88,7 +83,7 @@ class PrefsGeneralView: NSView {
 
         gridView.addRow(with: [updatesLabel])
         gridView.addColumn(with: [autoUpdateCheckbox, autoDownloadCheckbox])
-        
+
         let extrasLabel = NSTextField(labelWithString: "Extras:")
         extrasLabel.alignment = .right
         gridView.addRow(with: [extrasLabel, bitrateCheckbox])
@@ -144,15 +139,13 @@ private extension NSUserInterfaceItemIdentifier {
     static let bitrateId = NSUserInterfaceItemIdentifier(rawValue: "BitrateCheckbox")
     static let signalPercentageId = NSUserInterfaceItemIdentifier(rawValue: "SignalPercentageCheckbox")
     static let launchAtLoginId = NSUserInterfaceItemIdentifier(rawValue: "LaunchAtLoginCheckbox")
-
-
 }
 
 private extension String {
     static let startup = NSLocalizedString("Updates:")
     static let autoCheckUpdate = NSLocalizedString("Automatically check for updates.")
     static let autoDownload = NSLocalizedString("Automatically download new updates.")
-    
+
     static let showBitrate = NSLocalizedString("Show live bitrate in menu bar")
     static let showSignalPercentage = NSLocalizedString("Show signal as percentage")
 }
