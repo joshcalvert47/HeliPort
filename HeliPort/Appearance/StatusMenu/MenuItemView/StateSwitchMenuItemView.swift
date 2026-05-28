@@ -52,7 +52,7 @@ class StateSwitchMenuItemView: NSView {
     // MARK: Public
 
     public var state: Bool = false {
-        willSet(state) {
+        didSet {
             stateSwitch.state = state ? .on : .off
         }
     }
