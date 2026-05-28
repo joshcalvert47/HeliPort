@@ -4,12 +4,15 @@
         <title>HeliPort</title>
         <item>
             <title>2.3</title>
-            <pubDate>Thu, 28 May 2026 16:31:12 +0000</pubDate>
+            <pubDate>Thu, 28 May 2026 16:34:08 +0000</pubDate>
             <description><![CDATA[
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.4.0/primer.min.css"><meta charset="UTF-8">
                 <div class="markdown-body">
                     <h3>The latest updates are:</h3>
                     <ul>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/411b35667183707a11898f345139b72148a0ecc1"><tt>411b356</tt></a> Merge pull request #1 from 5T33Z0/master</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1b03608064dc9a93dc117ca5cf3c55d1200174c7"><tt>1b03608</tt></a> chore: update appcast.xml [skip ci]</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/730967b2f031e19ff518ace87565c2ddd2ce3ae2"><tt>730967b</tt></a> Merge branch &apos;master&apos; into master</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/3699afd4e46fb755659fffaed2997d73e8ff1946"><tt>3699afd</tt></a> Merge pull request #2 from perez987/master</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/da942ce05cf906d8a6516404ef8a0f1c5e7b898f"><tt>da942ce</tt></a> Prevent technical dashboard clipping in status menu</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/c96a2033ab26cdd71af05556407e6f907f1e0d79"><tt>c96a203</tt></a> Fix Spanish localization not applied in Debug tab</li>
@@ -18,11 +21,12 @@
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/59e0d35fac825b70b7ce49c74873f49d4bc0f098"><tt>59e0d35</tt></a> Update Spanish localized strings adding missing strings</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/61870def542f6d252d4ccce99e5e7d4136ee73bf"><tt>61870de</tt></a> Fix typos in Spanish localization strings</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/4ebb3a57e600ec57dc94ee9f544acf47ec1f4f5a"><tt>4ebb3a5</tt></a> Complete Spanish localizations</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/0cfc1bdf5b6c328c6b3e1a4f02770f2be61e4740"><tt>0cfc1bd</tt></a> Fix Wi-Fi toggle not updating visually when disabled</li>
                     </ul>
                 </div>
             ]]></description>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.3-alpha/HeliPort.dmg" sparkle:version="2.3-3699afd" sparkle:shortVersionString="2.3" type="application/octet-stream" sparkle:edSignature="tr0T1lCNHmETyq0cHWiEFpREar6Tpu1k70AM9s5zMmRRvAjZyln/6l94jgeTWbLMxNLOAKNCpfu2o+YyiPpgCQ==" length="1804805"/>
+            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.3-alpha/HeliPort.dmg" sparkle:version="2.3-411b356" sparkle:shortVersionString="2.3" type="application/octet-stream" sparkle:edSignature="ksLJVuJWYXrOtLepqZwSDe0QmeMBgvSEsOyMLnVZmv/5M+zEoTC7BK/T/n2Bbw/LK2kIRPuUtm1Pgm9FaCtuAw==" length="1804845"/>
         </item>
     </channel>
 </rss>
