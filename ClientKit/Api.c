@@ -71,11 +71,11 @@ bool get_network_ssid(char *ssid)
     if (ioctl_get(IOCTL_80211_NW_ID, &nwid, sizeof(struct ioctl_nw_id)) != KERN_SUCCESS) {
         goto error;
     }
-    
+
     memcpy(ssid, nwid.nwid, nwid.len);
-    
+
     return true;
-    
+
 error:
     return false;
 }
@@ -86,11 +86,11 @@ bool get_network_bssid(char *bssid)
     if (ioctl_get(IOCTL_80211_NW_BSSID, &nwbssid, sizeof(struct ioctl_nw_bssid)) != KERN_SUCCESS) {
         goto error;
     }
-    
+
     memcpy(bssid, nwbssid.bssid, ETHER_ADDR_LEN);
-    
+
     return true;
-    
+
 error:
     return false;
 }
@@ -172,12 +172,9 @@ bool open_adapter(io_connect_t *connection_t)
     mach_port_name_t port;
     uint32_t type = 0;
     char nn[20];
-    if (IOMasterPort(0, &port)) {
-        return false;
-    }
+    port = kIOMainPortDefault;
     CFMutableDictionaryRef matchingDict = IOServiceMatching("IOEthernetController");
     kr = IOServiceGetMatchingServices(port, matchingDict, &iter);
-    mach_port_deallocate(mach_task_self(), port);
     if (kr != KERN_SUCCESS)
         return false;
     while ((service = IOIteratorNext(iter)) && !found) {
@@ -245,7 +242,7 @@ kern_return_t _ioctl(int ctl, bool is_get, void *data, size_t data_len)
     close_adapter(con);
     return ret;
 }
-    
+
 kern_return_t ioctl_set(int ctl, void *data, size_t data_len) {
     return _ioctl(ctl, false, data, data_len);
 }

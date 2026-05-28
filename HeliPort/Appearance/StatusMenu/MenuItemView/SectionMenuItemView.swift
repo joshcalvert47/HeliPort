@@ -116,7 +116,10 @@ class SectionMenuItemView: SelectableMenuItemView {
             label.trailingAnchor.constraint(lessThanOrEqualTo: chevronImage.leadingAnchor, constant: -4),
 
             chevronImage.centerYAnchor.constraint(equalTo: centerYAnchor),
-            chevronImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -HeliPortUI.Spacing.menuHorizontalPadding)
+            chevronImage.trailingAnchor.constraint(
+                equalTo: self.trailingAnchor,
+                constant: -HeliPortUI.Spacing.menuHorizontalPadding
+            )
         ])
     }
 }

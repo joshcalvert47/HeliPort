@@ -44,7 +44,7 @@ class NetworkDetailsViewModel: ObservableObject {
 
 struct NetworkDetailsDashboard: View {
     @ObservedObject var viewModel: NetworkDetailsViewModel
-    
+
     private var signalDisplay: String {
         if UserDefaults.standard.bool(forKey: String.DefaultsKey.showSignalAsPercentage) {
             let percentage = max(min(viewModel.signal + 100, 70), 0) * 100 / 70
@@ -52,14 +52,14 @@ struct NetworkDetailsDashboard: View {
         }
         return "\(viewModel.signal) dBm"
     }
-    
+
     private var signalColor: Color {
         let rssi = viewModel.signal
         if rssi > -60 { return .green }
         if rssi > -75 { return Color(red: 1, green: 0.6, blue: 0) }
         return .red
     }
-    
+
     var body: some View {
         VStack(spacing: 0) {
             // Header
@@ -72,13 +72,13 @@ struct NetworkDetailsDashboard: View {
                         .font(.system(size: 14, weight: .bold))
                         .foregroundColor(signalColor)
                 }
-                
+
                 VStack(alignment: .leading, spacing: 1) {
                     Text(viewModel.ssid)
                         .font(.system(size: 15, weight: .bold, design: .rounded))
                         .foregroundStyle(.primary)
                         .lineLimit(1)
-                    
+
                     HStack(spacing: 4) {
                         Circle()
                             .fill(signalColor)
@@ -88,9 +88,9 @@ struct NetworkDetailsDashboard: View {
                             .foregroundColor(signalColor.opacity(0.8))
                     }
                 }
-                
+
                 Spacer()
-                
+
                 // Tx Rate Badge
                 VStack(alignment: .trailing, spacing: -2) {
                     Text(viewModel.txRate.replacingOccurrences(of: " Mbps", with: ""))
@@ -107,7 +107,7 @@ struct NetworkDetailsDashboard: View {
                 .cornerRadius(10)
             }
             .padding(.bottom, 14)
-            
+
             // Signal Chart
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
@@ -120,7 +120,7 @@ struct NetworkDetailsDashboard: View {
                         .font(.system(size: 10, weight: .bold, design: .monospaced))
                         .foregroundColor(signalColor)
                 }
-                
+
                 Chart {
                     ForEach(viewModel.signalHistory) { data in
                         AreaMark(
@@ -135,7 +135,7 @@ struct NetworkDetailsDashboard: View {
                             )
                         )
                         .interpolationMethod(.monotone)
-                        
+
                         LineMark(
                             x: .value("Time", data.time),
                             y: .value("Signal", data.value)
@@ -151,10 +151,10 @@ struct NetworkDetailsDashboard: View {
                 .frame(height: 36)
             }
             .padding(.bottom, 16)
-            
+
             Divider().opacity(0.1)
                 .padding(.bottom, 14)
-            
+
             // Details Grid
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                 DetailItem(label: "IP Address", value: viewModel.ipAddress, icon: "network")
@@ -182,7 +182,7 @@ struct DetailItem: View {
     let label: String
     let value: String
     let icon: String
-    
+
     var body: some View {
         HStack(alignment: .center, spacing: 8) {
             ZStack {
@@ -193,7 +193,7 @@ struct DetailItem: View {
                     .font(.system(size: 9, weight: .bold))
                     .foregroundColor(.accentColor)
             }
-            
+
             VStack(alignment: .leading, spacing: 0) {
                 Text(label.uppercased())
                     .font(.system(size: 7.5, weight: .black))
@@ -214,4 +214,3 @@ struct DetailItem: View {
         }
     }
 }
-

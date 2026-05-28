@@ -28,12 +28,18 @@ final class CredentialsManager {
     }
 
     func save(_ network: NetworkInfo) {
-        guard let networkAuthJson = try? String(decoding: JSONEncoder().encode(network.auth), as: UTF8.self) else {
+        guard
+            let networkAuthData = try? JSONEncoder().encode(network.auth),
+            let networkAuthJson = String(bytes: networkAuthData, encoding: .utf8)
+        else {
             return
         }
         network.auth = NetworkAuth()
         let entity = NetworkInfoStorageEntity(network)
-        guard let entityJson = try? String(decoding: JSONEncoder().encode(entity), as: UTF8.self) else {
+        guard
+            let entityData = try? JSONEncoder().encode(entity),
+            let entityJson = String(bytes: entityData, encoding: .utf8)
+        else {
             return
         }
 
@@ -87,8 +93,12 @@ final class CredentialsManager {
 
         entity.autoJoin = autoJoin
 
-        guard let entityJson = try? String(decoding: JSONEncoder().encode(entity), as: UTF8.self),
-              let authJson = try? String(decoding: JSONEncoder().encode(auth), as: UTF8.self) else {
+        guard
+            let entityData = try? JSONEncoder().encode(entity),
+            let entityJson = String(bytes: entityData, encoding: .utf8),
+            let authData = try? JSONEncoder().encode(auth),
+            let authJson = String(bytes: authData, encoding: .utf8)
+        else {
             return
         }
 
@@ -103,8 +113,12 @@ final class CredentialsManager {
 
         entity.order = priority
 
-        guard let entityJson = try? String(decoding: JSONEncoder().encode(entity), as: UTF8.self),
-              let authJson = try? String(decoding: JSONEncoder().encode(auth), as: UTF8.self) else {
+        guard
+            let entityData = try? JSONEncoder().encode(entity),
+            let entityJson = String(bytes: entityData, encoding: .utf8),
+            let authData = try? JSONEncoder().encode(auth),
+            let authJson = String(bytes: authData, encoding: .utf8)
+        else {
             return
         }
 

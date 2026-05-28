@@ -25,7 +25,7 @@ public extension String {
 
     init<T>(ssid: T) {
         self = withUnsafeBytes(of: ssid) {
-            String(decoding: $0.prefix(Int(NWID_LEN)), as: UTF8.self)
+            String(bytes: $0.prefix(Int(NWID_LEN)), encoding: .utf8) ?? ""
         }.trimmingCharacters(in: .whitespaces)
          .replacingOccurrences(of: "\0", with: "")
         self.unicodeScalars.removeAll(where: { CharacterSet.newlines.contains($0) })
