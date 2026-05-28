@@ -83,7 +83,7 @@ struct NetworkDetailsDashboard: View {
                         Circle()
                             .fill(signalColor)
                             .frame(width: 6, height: 6)
-                        Text("Connected")
+                        Text(String.Dashboard.connected)
                             .font(.system(size: 11, weight: .semibold))
                             .foregroundColor(signalColor.opacity(0.8))
                     }
@@ -111,7 +111,7 @@ struct NetworkDetailsDashboard: View {
             // Signal Chart
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
-                    Text("SIGNAL STRENGTH")
+                    Text(String.Dashboard.signalStrength)
                         .font(.system(size: 9, weight: .black))
                         .foregroundColor(.secondary.opacity(0.6))
                         .tracking(0.8)
@@ -157,12 +157,14 @@ struct NetworkDetailsDashboard: View {
 
             // Details Grid
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                DetailItem(label: "IP Address", value: viewModel.ipAddress, icon: "network")
-                DetailItem(label: "Router", value: viewModel.router, icon: "router")
-                DetailItem(label: "Channel", value: viewModel.channel, icon: "antenna.radiowaves.left.and.right")
-                DetailItem(label: "PHY Mode", value: viewModel.phyMode, icon: "bolt.fill")
+                DetailItem(label: String.Dashboard.ipAddress, value: viewModel.ipAddress, icon: "network")
+                DetailItem(label: String.Dashboard.router, value: viewModel.router, icon: "router")
+                DetailItem(
+                    label: String.Dashboard.channel, value: viewModel.channel, icon: "antenna.radiowaves.left.and.right"
+                )
+                DetailItem(label: String.Dashboard.phyMode, value: viewModel.phyMode, icon: "bolt.fill")
                 DetailItem(label: "BSSID", value: viewModel.bssid.uppercased(), icon: "macpro.gen3")
-                DetailItem(label: "Noise", value: "\(viewModel.noise) dBm", icon: "ear.and.waveform")
+                DetailItem(label: String.Dashboard.noise, value: "\(viewModel.noise) dBm", icon: "ear.and.waveform")
                 DetailItem(label: "SNR", value: "\(viewModel.snr) dB", icon: "equal.circle")
             }
         }

@@ -13,18 +13,9 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
 
     // - MARK: Menu items
 
-    private var toggleState: Bool = true  // add this property
-
     private lazy var statusItem: NSMenuItem = {
-        let binding = Binding(
-            get: { self.toggleState },          // ← reads local state, not driver
-            set: {
-                self.toggleState = $0           // ← updates immediately
-                self.isWiFiOn = $0             // ← then tells driver
-            }
-        )
-        return ModernToggleMenuItem(title: String.Modern.wifi, isOn: binding) { _ in
-              // power state is handled by binding
+        return ModernToggleMenuItem(title: String.Modern.wifi, isOn: true) { [weak self] newValue in
+            self?.isWiFiOn = newValue
         }
     }()
 
@@ -140,7 +131,7 @@ final class StatusMenuModern: StatusMenuBase, StatusMenuItems {
     override var isNetworkCardEnabled: Bool {
         willSet(newState) {
             super.isNetworkCardEnabled = newState
-            self.toggleState = newState
+            (statusItem as? ModernToggleMenuItem)?.update(isOn: newState)
         }
     }
 
