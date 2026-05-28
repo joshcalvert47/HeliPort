@@ -3,13 +3,18 @@
     <channel>
         <title>HeliPort</title>
         <item>
-            <title>2.3</title>
-            <pubDate>Thu, 28 May 2026 16:34:08 +0000</pubDate>
+            <title>2.4</title>
+            <pubDate>Thu, 28 May 2026 20:34:50 +0000</pubDate>
             <description><![CDATA[
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.4.0/primer.min.css"><meta charset="UTF-8">
                 <div class="markdown-body">
                     <h3>The latest updates are:</h3>
                     <ul>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/4b63a86f755117d6a637e061c00112df55804563"><tt>4b63a86</tt></a> Update README.md</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/46ec53df2db98e8cf51dc080056e8b2ae7556058"><tt>46ec53d</tt></a> Update project.pbxproj</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1d76be198f3749d0178eadde9b7c973e1bbf4cf6"><tt>1d76be1</tt></a> Merge pull request #3 from perez987/master</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/f3f299c2d82a14ab817b034c25143df2fe052a14"><tt>f3f299c</tt></a> Localize dashboard labels &amp; fix toggle state</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/03338f7a4d7dccfad91a2c68b2fe556fc0da50b2"><tt>03338f7</tt></a> chore: update appcast.xml [skip ci]</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/411b35667183707a11898f345139b72148a0ecc1"><tt>411b356</tt></a> Merge pull request #1 from 5T33Z0/master</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1b03608064dc9a93dc117ca5cf3c55d1200174c7"><tt>1b03608</tt></a> chore: update appcast.xml [skip ci]</li>
                     <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/730967b2f031e19ff518ace87565c2ddd2ce3ae2"><tt>730967b</tt></a> Merge branch &apos;master&apos; into master</li>
@@ -26,7 +31,7 @@
                 </div>
             ]]></description>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.3-alpha/HeliPort.dmg" sparkle:version="2.3-411b356" sparkle:shortVersionString="2.3" type="application/octet-stream" sparkle:edSignature="ksLJVuJWYXrOtLepqZwSDe0QmeMBgvSEsOyMLnVZmv/5M+zEoTC7BK/T/n2Bbw/LK2kIRPuUtm1Pgm9FaCtuAw==" length="1804845"/>
+            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.4-alpha/HeliPort.dmg" sparkle:version="2.4-4b63a86" sparkle:shortVersionString="2.4" type="application/octet-stream" sparkle:edSignature="T69sIugTlzsIWFjR33wAyn6VgBQqOmSvZZTSHcbaMvZgcSmRcrVTp/sCzEsac1FUwuWoKum3CbNJpiHysy6SDg==" length="1808944"/>
         </item>
     </channel>
 </rss>
