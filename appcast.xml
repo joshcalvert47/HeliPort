@@ -4,28 +4,25 @@
         <title>HeliPort</title>
         <item>
             <title>2.3</title>
-            <pubDate>Fri, 15 May 2026 12:28:22 +0000</pubDate>
+            <pubDate>Thu, 28 May 2026 16:31:12 +0000</pubDate>
             <description><![CDATA[
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.4.0/primer.min.css"><meta charset="UTF-8">
                 <div class="markdown-body">
                     <h3>The latest updates are:</h3>
                     <ul>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/a4d8aff6ff89084a9a29420408f4c5bb57919463"><tt>a4d8aff</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/c5ce8a2f6401aff75d3acd80d0bae40a2c85a7c9"><tt>c5ce8a2</tt></a> refactor: update check for updates menu item icon and trigger update manager directly</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/c715deafa1a0fc02dda21a408c656227148725a6"><tt>c715dea</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/0589ac1f3e1f3bb0c1c33d1c3e50d581dc7a76ca"><tt>0589ac1</tt></a> refactor: redesign status menu using Modern UI components, update scanning intervals, and optimize network list layout.</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/c9e7b7ebc88df23e8a74a61507658e6e2347e1ec"><tt>c9e7b7e</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/5dba5aa42c25cc0b2a62f9434e51c86bc4a9ca22"><tt>5dba5aa</tt></a> Add GitHub Actions workflow for Jekyll deployment</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/5de1268e7264f83394988c45c95ab5d36da67aea"><tt>5de1268</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/06f6fb315d0eb5cbbfec0ae627b37b0ce103d5a3"><tt>06f6fb3</tt></a> ci: trigger CI to test Sparkle signing with SPARKLE_KEY secret</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/b40446e4d6147e8915c8b3a89e6f47983e2866b1"><tt>b40446e</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/cfdbd39e152765fd30284ff1913ab48a3f965167"><tt>cfdbd39</tt></a> refactor: move SparkleDelegate implementation to UpdateManager and remove UI-based updater reference</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/7aba04e74cb1ea6d3a65bbf8925899dd951b0306"><tt>7aba04e</tt></a> feat: implement SparkleDelegate for update lifecycle logging and fix code signing configuration in CI workflows</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/3699afd4e46fb755659fffaed2997d73e8ff1946"><tt>3699afd</tt></a> Merge pull request #2 from perez987/master</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/da942ce05cf906d8a6516404ef8a0f1c5e7b898f"><tt>da942ce</tt></a> Prevent technical dashboard clipping in status menu</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/c96a2033ab26cdd71af05556407e6f907f1e0d79"><tt>c96a203</tt></a> Fix Spanish localization not applied in Debug tab</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/0df9fa06454f17fd4c5dd162ab218f2e31f549d0"><tt>0df9fa0</tt></a> Fix Spanish translation typos</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/55d311f9eb5557db739d16eb4e1d7d181ba99f35"><tt>55d311f</tt></a> Modernize APIs and clean up Swift/C code</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/59e0d35fac825b70b7ce49c74873f49d4bc0f098"><tt>59e0d35</tt></a> Update Spanish localized strings adding missing strings</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/61870def542f6d252d4ccce99e5e7d4136ee73bf"><tt>61870de</tt></a> Fix typos in Spanish localization strings</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/4ebb3a57e600ec57dc94ee9f544acf47ec1f4f5a"><tt>4ebb3a5</tt></a> Complete Spanish localizations</li>
                     </ul>
                 </div>
             ]]></description>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.3/HeliPort.dmg" sparkle:version="2.3-a4d8aff" sparkle:shortVersionString="2.3" type="application/octet-stream" sparkle:edSignature="CMR/u1ITDtmsdUYSrbLmR9YW3JTemSxk7TQY5Aoo7ZyYP9ylcRpXT0tLtbt7/9LRMVMfb2DIrdHKW6PqEe34Ag==" length="1804934"/>
+            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.3-alpha/HeliPort.dmg" sparkle:version="2.3-3699afd" sparkle:shortVersionString="2.3" type="application/octet-stream" sparkle:edSignature="tr0T1lCNHmETyq0cHWiEFpREar6Tpu1k70AM9s5zMmRRvAjZyln/6l94jgeTWbLMxNLOAKNCpfu2o+YyiPpgCQ==" length="1804805"/>
         </item>
     </channel>
 </rss>
