@@ -71,6 +71,18 @@ class PrefsWindow: NSWindow {
         self.orderOut(NSApp)
     }
 
+    // Close Prefs window from Cmd + W keyboard
+    override func performKeyEquivalent(with event: NSEvent) -> Bool {
+         let modifiers = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
+         guard modifiers == .command,
+               event.charactersIgnoringModifiers?.lowercased() == "w" else {
+             return super.performKeyEquivalent(with: event)
+         }
+
+         close()
+         return true
+     }
+
     @objc private func clickToolbarItem(_ sender: NSToolbarItem) {
         guard let identifier = toolbar?.selectedItemIdentifier else { return }
         guard previousIdentifier != identifier else {
@@ -86,7 +98,7 @@ class PrefsWindow: NSWindow {
         switch identifier {
         case .networks:
             newView = PrefsSavedNetworksView()
-            size = NSSize(width: 620, height: 420)
+            size = NSSize(width: 480, height: 320)
         case .general:
             newView = PrefsGeneralView()
             size = newView!.fittingSize

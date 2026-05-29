@@ -242,11 +242,11 @@
 		BCFA32DE2424D2BE00E23603 = {
 			isa = PBXGroup;
 			children = (
-				7562BBE324826102008A9BD2 /* README.md */,
 				F86A896C243CD1B500CBABC2 /* ClientKit */,
 				BCFA32E92424D2BE00E23603 /* HeliPort */,
 				50F4959E24BDEB6500AE4C08 /* HeliPort Launcher */,
 				BCFA32E82424D2BE00E23603 /* Products */,
+				7562BBE324826102008A9BD2 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};

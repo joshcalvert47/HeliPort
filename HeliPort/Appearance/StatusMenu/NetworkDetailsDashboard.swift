@@ -158,7 +158,7 @@ struct NetworkDetailsDashboard: View {
             // Details Grid
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                 DetailItem(label: String.Dashboard.ipAddress, value: viewModel.ipAddress, icon: "network")
-                DetailItem(label: String.Dashboard.router, value: viewModel.router, icon: "router")
+                DetailItem(label: String.Dashboard.router, value: viewModel.router, icon: "wifi.router")
                 DetailItem(
                     label: String.Dashboard.channel, value: viewModel.channel, icon: "antenna.radiowaves.left.and.right"
                 )
