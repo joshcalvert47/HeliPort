@@ -70,7 +70,7 @@ class PrefsWindow: NSWindow {
         super.close()
         self.orderOut(NSApp)
     }
-
+    
     // Close Prefs window from Cmd + W keyboard
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
          let modifiers = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
@@ -98,14 +98,14 @@ class PrefsWindow: NSWindow {
         switch identifier {
         case .networks:
             newView = PrefsSavedNetworksView()
-            size = NSSize(width: 480, height: 320)
+            size = NSSize(width: 540, height: 320)
         case .general:
             newView = PrefsGeneralView()
             size = newView!.fittingSize
         case .debug:
             if #available(macOS 11.0, *) {
                 newView = NSHostingView(rootView: PrefsDebugView())
-                size = NSSize(width: 480, height: 320)
+                size = NSSize(width: 540, height: 320)
             } else {
                 Log.error("Debug view requires macOS 11.0+")
                 return
@@ -262,7 +262,7 @@ struct PrefsDebugView: View {
             Spacer()
         }
         .padding(30)
-        .frame(width: 480, height: 320)
+        .frame(width: 540, height: 320)
     }
 }
 
