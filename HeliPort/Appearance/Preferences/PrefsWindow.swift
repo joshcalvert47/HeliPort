@@ -70,7 +70,7 @@ class PrefsWindow: NSWindow {
         super.close()
         self.orderOut(NSApp)
     }
-    
+
     // Close Prefs window from Cmd + W keyboard
     override func performKeyEquivalent(with event: NSEvent) -> Bool {
          let modifiers = event.modifierFlags.intersection(.deviceIndependentFlagsMask)
