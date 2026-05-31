@@ -47,7 +47,7 @@
 		BCCB2AA4243708090005BB82 /* WiFiMenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB2AA3243708090005BB82 /* WiFiMenuItemView.swift */; };
 		BCFA32EB2424D2BE00E23603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA32EA2424D2BE00E23603 /* AppDelegate.swift */; };
 		BCFA32ED2424D2BF00E23603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFA32EC2424D2BF00E23603 /* Assets.xcassets */; };
-		BCFA32F02424D2BF00E23603 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFA32EE2424D2BF00E23603 /* MainMenu.xib */; };
+		D918FC7A2FCC7609009EF084 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D918FC792FCC7607009EF084 /* main.swift */; };
 		D9256B5F2FCA090E0087D72A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D9256B5E2FCA090E0087D72A /* Credits.rtf */; };
 		F336D63C24B497B6004C98C4 /* NetworkManager+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336D63B24B497B6004C98C4 /* NetworkManager+Data.swift */; };
 		F336D63E24B4986C004C98C4 /* itl_phy_mode+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336D63D24B4986C004C98C4 /* itl_phy_mode+Description.swift */; };
@@ -127,9 +127,9 @@
 		BCFA32E72424D2BE00E23603 /* HeliPort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeliPort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFA32EA2424D2BE00E23603 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCFA32EC2424D2BF00E23603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BCFA32EF2424D2BF00E23603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BCFA32F12424D2BF00E23603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFA32F22424D2BF00E23603 /* HeliPort.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeliPort.entitlements; sourceTree = "<group>"; };
+		D918FC792FCC7607009EF084 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		D9256B5D2FCA090E0087D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9256B602FCA09110087D72A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		D9256B612FCA09110087D72A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ar; path = ar.lproj/Credits.rtf; sourceTree = "<group>"; };
@@ -248,7 +248,6 @@
 			children = (
 				50A1A1A12C5E22AB002C5001 /* HeliPortUI.swift */,
 				5013B8FA2C5C8C8D002C5006 /* Localizable.xcstrings */,
-				BCFA32EE2424D2BF00E23603 /* MainMenu.xib */,
 				50A1A1A12C5E22AB002C5002 /* ModernWiFiConfigView.swift */,
 				13C20DFD24D92E3800B1E713 /* Preferences */,
 				505EC11B2C5BD85300F4E4EA /* StatusBarIcon */,
@@ -281,6 +280,7 @@
 		BCFA32E92424D2BE00E23603 /* HeliPort */ = {
 			isa = PBXGroup;
 			children = (
+				D918FC792FCC7607009EF084 /* main.swift */,
 				BCFA32EA2424D2BE00E23603 /* AppDelegate.swift */,
 				BCF712FA243C9EB100BE3C05 /* Appearance */,
 				BCFA32EC2424D2BF00E23603 /* Assets.xcassets */,
@@ -449,7 +449,6 @@
 				7562BBE424826103008A9BD2 /* README.md in Resources */,
 				5013B8FB2C5C8C8D002C5006 /* Localizable.xcstrings in Resources */,
 				BCFA32ED2424D2BF00E23603 /* Assets.xcassets in Resources */,
-				BCFA32F02424D2BF00E23603 /* MainMenu.xib in Resources */,
 				D9256B5F2FCA090E0087D72A /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,6 +509,7 @@
 				BCFA32EB2424D2BE00E23603 /* AppDelegate.swift in Sources */,
 				50680FCA2C5FDB75008AF10F /* HidableMenuItemView.swift in Sources */,
 				5013B9072C5E1EF2002C5006 /* KeyValueMenuItemView.swift in Sources */,
+				D918FC7A2FCC7609009EF084 /* main.swift in Sources */,
 				BCCB2AA4243708090005BB82 /* WiFiMenuItemView.swift in Sources */,
 				1380C36124D54BFD00A448CF /* PrefsSavedNetworksView.swift in Sources */,
 				138D3CCA24CE663B00793AC1 /* BugReporter.swift in Sources */,
@@ -547,14 +547,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BCFA32EE2424D2BF00E23603 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BCFA32EF2424D2BF00E23603 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
 		D9256B5E2FCA090E0087D72A /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -16,7 +16,6 @@
 import Cocoa
 import Sparkle
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     public var updaterController: SPUStandardUpdaterController?
