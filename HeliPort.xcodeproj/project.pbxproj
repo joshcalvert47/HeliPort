@@ -41,7 +41,6 @@
 		50F4959824BDD26D00AE4C08 /* LoginItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4959724BDD26D00AE4C08 /* LoginItemManager.swift */; };
 		50F495A024BDEB6500AE4C08 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F4959F24BDEB6500AE4C08 /* main.swift */; };
 		50F495AC24BDEBB500AE4C08 /* HeliPort Launcher.app in Embed Launcher */ = {isa = PBXBuildFile; fileRef = 50F4959D24BDEB6500AE4C08 /* HeliPort Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		7557CDF424935260000F0F71 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7557CDF324935260000F0F71 /* Credits.rtf */; };
 		7562BBE424826103008A9BD2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7562BBE324826102008A9BD2 /* README.md */; };
 		75FDF38B2481D22000B2A601 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FDF38A2481D22000B2A601 /* NetworkManager.swift */; };
 		75FDF38C2481D25A00B2A601 /* Api.c in Sources */ = {isa = PBXBuildFile; fileRef = F8F6CF0B243D675800965B43 /* Api.c */; };
@@ -49,6 +48,7 @@
 		BCFA32EB2424D2BE00E23603 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFA32EA2424D2BE00E23603 /* AppDelegate.swift */; };
 		BCFA32ED2424D2BF00E23603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFA32EC2424D2BF00E23603 /* Assets.xcassets */; };
 		BCFA32F02424D2BF00E23603 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCFA32EE2424D2BF00E23603 /* MainMenu.xib */; };
+		D9256B5F2FCA090E0087D72A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D9256B5E2FCA090E0087D72A /* Credits.rtf */; };
 		F336D63C24B497B6004C98C4 /* NetworkManager+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336D63B24B497B6004C98C4 /* NetworkManager+Data.swift */; };
 		F336D63E24B4986C004C98C4 /* itl_phy_mode+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336D63D24B4986C004C98C4 /* itl_phy_mode+Description.swift */; };
 		F336D64024B7B7D8004C98C4 /* itl80211_security+Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336D63F24B7B7D8004C98C4 /* itl80211_security+Description.swift */; };
@@ -121,7 +121,6 @@
 		50F4959F24BDEB6500AE4C08 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		50F495A624BDEB6700AE4C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50F495A724BDEB6700AE4C08 /* HeliPort_Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeliPort_Launcher.entitlements; sourceTree = "<group>"; };
-		7557CDF324935260000F0F71 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		7562BBE324826102008A9BD2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		75FDF38A2481D22000B2A601 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BCCB2AA3243708090005BB82 /* WiFiMenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMenuItemView.swift; sourceTree = "<group>"; wrapsLines = 0; };
@@ -131,6 +130,26 @@
 		BCFA32EF2424D2BF00E23603 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		BCFA32F12424D2BF00E23603 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFA32F22424D2BF00E23603 /* HeliPort.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeliPort.entitlements; sourceTree = "<group>"; };
+		D9256B5D2FCA090E0087D72A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B602FCA09110087D72A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B612FCA09110087D72A /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ar; path = ar.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B622FCA09120087D72A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "zh-Hans"; path = "zh-Hans.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		D9256B632FCA09120087D72A /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = cs; path = cs.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B642FCA09140087D72A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = fr; path = fr.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B652FCA09140087D72A /* de */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = de; path = de.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B662FCA09150087D72A /* el */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = el; path = el.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B672FCA09160087D72A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = id; path = id.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B682FCA09170087D72A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = it; path = it.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B692FCA09170087D72A /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ko; path = ko.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B6A2FCA09180087D72A /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = pl; path = pl.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B6B2FCA09180087D72A /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "pt-BR"; path = "pt-BR.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		D9256B6C2FCA09190087D72A /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "pt-PT"; path = "pt-PT.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		D9256B6D2FCA091A0087D72A /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ro; path = ro.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B6E2FCA091B0087D72A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B6F2FCA091C0087D72A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = es; path = es.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B702FCA091E0087D72A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = tr; path = tr.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B712FCA091E0087D72A /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = uk; path = uk.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D9256B722FCA09200087D72A /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = vi; path = vi.lproj/Credits.rtf; sourceTree = "<group>"; };
 		F336D63B24B497B6004C98C4 /* NetworkManager+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Data.swift"; sourceTree = "<group>"; };
 		F336D63D24B4986C004C98C4 /* itl_phy_mode+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "itl_phy_mode+Description.swift"; sourceTree = "<group>"; };
 		F336D63F24B7B7D8004C98C4 /* itl80211_security+Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "itl80211_security+Description.swift"; sourceTree = "<group>"; };
@@ -169,8 +188,8 @@
 		13C20DFD24D92E3800B1E713 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
-				1380C36024D54BFD00A448CF /* PrefsSavedNetworksView.swift */,
 				13C20DF924D8B6D100B1E713 /* PrefsGeneralView.swift */,
+				1380C36024D54BFD00A448CF /* PrefsSavedNetworksView.swift */,
 				1380C36424D5580200A448CF /* PrefsWindow.swift */,
 			);
 			path = Preferences;
@@ -179,11 +198,11 @@
 		5013B8FE2C5E1B56002C5006 /* StatusMenu */ = {
 			isa = PBXGroup;
 			children = (
-				50A1A1A12C5E22AB002C5003 /* ModernNetworkMenuItem.swift */,
-				50A1A1A12C5E22AB002C5004 /* QuickToggleView.swift */,
-				50A1A1A12C5E22AB002C5005 /* NetworkDetailsDashboard.swift */,
-				5013B9052C5E1ED5002C5006 /* MenuItemView */,
 				5068784D2C5FE16C0046150A /* HPMenuItem.swift */,
+				5013B9052C5E1ED5002C5006 /* MenuItemView */,
+				50A1A1A12C5E22AB002C5003 /* ModernNetworkMenuItem.swift */,
+				50A1A1A12C5E22AB002C5005 /* NetworkDetailsDashboard.swift */,
+				50A1A1A12C5E22AB002C5004 /* QuickToggleView.swift */,
 				5013B8FF2C5E1E00002C5006 /* StatusMenuBase.swift */,
 				5013B9032C5E1EA9002C5006 /* StatusMenuModern.swift */,
 			);
@@ -228,13 +247,13 @@
 			isa = PBXGroup;
 			children = (
 				50A1A1A12C5E22AB002C5001 /* HeliPortUI.swift */,
-				50A1A1A12C5E22AB002C5002 /* ModernWiFiConfigView.swift */,
-				5013B8FE2C5E1B56002C5006 /* StatusMenu */,
-				505EC11B2C5BD85300F4E4EA /* StatusBarIcon */,
-				13C20DFD24D92E3800B1E713 /* Preferences */,
-				13AB3CA724DE47D10093D283 /* WiFiConfigWindow.swift */,
 				5013B8FA2C5C8C8D002C5006 /* Localizable.xcstrings */,
 				BCFA32EE2424D2BF00E23603 /* MainMenu.xib */,
+				50A1A1A12C5E22AB002C5002 /* ModernWiFiConfigView.swift */,
+				13C20DFD24D92E3800B1E713 /* Preferences */,
+				505EC11B2C5BD85300F4E4EA /* StatusBarIcon */,
+				5013B8FE2C5E1B56002C5006 /* StatusMenu */,
+				13AB3CA724DE47D10093D283 /* WiFiConfigWindow.swift */,
 			);
 			path = Appearance;
 			sourceTree = "<group>";
@@ -242,11 +261,11 @@
 		BCFA32DE2424D2BE00E23603 = {
 			isa = PBXGroup;
 			children = (
-				7562BBE324826102008A9BD2 /* README.md */,
 				F86A896C243CD1B500CBABC2 /* ClientKit */,
 				BCFA32E92424D2BE00E23603 /* HeliPort */,
 				50F4959E24BDEB6500AE4C08 /* HeliPort Launcher */,
 				BCFA32E82424D2BE00E23603 /* Products */,
+				7562BBE324826102008A9BD2 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -262,19 +281,19 @@
 		BCFA32E92424D2BE00E23603 /* HeliPort */ = {
 			isa = PBXGroup;
 			children = (
-				BCF712FA243C9EB100BE3C05 /* Appearance */,
 				BCFA32EA2424D2BE00E23603 /* AppDelegate.swift */,
+				BCF712FA243C9EB100BE3C05 /* Appearance */,
+				BCFA32EC2424D2BF00E23603 /* Assets.xcassets */,
+				5013B90C2C5E20E1002C5006 /* Bridge.h */,
 				F379276E24A0A4A50087FF2B /* CredentialsManager.swift */,
+				D9256B5E2FCA090E0087D72A /* Credits.rtf */,
+				BCFA32F22424D2BF00E23603 /* HeliPort.entitlements */,
+				50A1A1A12C5E22AB002C5100 /* HeliPortIntents.swift */,
+				BCFA32F12424D2BF00E23603 /* Info.plist */,
 				50F4959724BDD26D00AE4C08 /* LoginItemManager.swift */,
 				75FDF38A2481D22000B2A601 /* NetworkManager.swift */,
-				50E7700E2C5A7CD600DB1160 /* UpdateManager.swift */,
-				5013B90C2C5E20E1002C5006 /* Bridge.h */,
-				BCFA32EC2424D2BF00E23603 /* Assets.xcassets */,
-				BCFA32F12424D2BF00E23603 /* Info.plist */,
-				BCFA32F22424D2BF00E23603 /* HeliPort.entitlements */,
-				7557CDF324935260000F0F71 /* Credits.rtf */,
-				50A1A1A12C5E22AB002C5100 /* HeliPortIntents.swift */,
 				F34B2B8B24AA4C08009AB1BB /* Supporting files */,
+				50E7700E2C5A7CD600DB1160 /* UpdateManager.swift */,
 			);
 			path = HeliPort;
 			sourceTree = "<group>";
@@ -285,17 +304,17 @@
 				F33A1F3A24C83016008ED2BD /* Alert.swift */,
 				138D3CC924CE663B00793AC1 /* BugReporter.swift */,
 				138D3CC724CE635800793AC1 /* Commands.swift */,
-				5088F70726BEA46F009E3A15 /* KextInfo.swift */,
-				F379277024A0A52E0087FF2B /* Log.swift */,
 				F3915F0624AB1A1B00E6614D /* itl_80211_state+Extensions.swift */,
 				F336D63D24B4986C004C98C4 /* itl_phy_mode+Description.swift */,
 				F336D63F24B7B7D8004C98C4 /* itl80211_security+Description.swift */,
+				5088F70726BEA46F009E3A15 /* KextInfo.swift */,
+				F379277024A0A52E0087FF2B /* Log.swift */,
 				F336D63B24B497B6004C98C4 /* NetworkManager+Data.swift */,
 				5013B8FC2C5DF244002C5006 /* NSApp+Extensions.swift */,
+				5013B9132C5E22F2002C5006 /* NSImage+Extensions.swift */,
 				F33A1F3E24C8347F008ED2BD /* NSLocalizedString+Extensions.swift */,
 				F34B2B8C24AA4C1E009AB1BB /* NSMenuItem+Extensions.swift */,
 				1317990A256986E5006957D8 /* String+Extensions.swift */,
-				5013B9132C5E22F2002C5006 /* NSImage+Extensions.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -431,7 +450,7 @@
 				5013B8FB2C5C8C8D002C5006 /* Localizable.xcstrings in Resources */,
 				BCFA32ED2424D2BF00E23603 /* Assets.xcassets in Resources */,
 				BCFA32F02424D2BF00E23603 /* MainMenu.xib in Resources */,
-				7557CDF424935260000F0F71 /* Credits.rtf in Resources */,
+				D9256B5F2FCA090E0087D72A /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +553,33 @@
 				BCFA32EF2424D2BF00E23603 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D9256B5E2FCA090E0087D72A /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D9256B5D2FCA090E0087D72A /* Base */,
+				D9256B602FCA09110087D72A /* en */,
+				D9256B612FCA09110087D72A /* ar */,
+				D9256B622FCA09120087D72A /* zh-Hans */,
+				D9256B632FCA09120087D72A /* cs */,
+				D9256B642FCA09140087D72A /* fr */,
+				D9256B652FCA09140087D72A /* de */,
+				D9256B662FCA09150087D72A /* el */,
+				D9256B672FCA09160087D72A /* id */,
+				D9256B682FCA09170087D72A /* it */,
+				D9256B692FCA09170087D72A /* ko */,
+				D9256B6A2FCA09180087D72A /* pl */,
+				D9256B6B2FCA09180087D72A /* pt-BR */,
+				D9256B6C2FCA09190087D72A /* pt-PT */,
+				D9256B6D2FCA091A0087D72A /* ro */,
+				D9256B6E2FCA091B0087D72A /* ru */,
+				D9256B6F2FCA091C0087D72A /* es */,
+				D9256B702FCA091E0087D72A /* tr */,
+				D9256B712FCA091E0087D72A /* uk */,
+				D9256B722FCA09200087D72A /* vi */,
+			);
+			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

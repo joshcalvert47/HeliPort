@@ -339,6 +339,44 @@ class StatusMenuBase: NSMenu, NSMenuDelegate {
         case .aboutHeliport:
             NSApplication.shared.orderFrontStandardAboutPanel()
             NSApplication.shared.activate(ignoringOtherApps: true)
+
+            DispatchQueue.main.async {
+                let applicationName = (Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String)
+                     ?? (Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as? String)
+                     ?? "HeliPort"
+                 let aboutWindow = NSApplication.shared.keyWindow ??
+                     NSApplication.shared.orderedWindows.first(where: {
+                         $0.isVisible && $0.title.localizedCaseInsensitiveContains(applicationName)
+                     })
+                guard let aboutWindow else {
+                     return
+                 }
+
+                var monitor: Any?
+                monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+                    if event.modifierFlags.contains(.command) && event.charactersIgnoringModifiers == "w" {
+                        aboutWindow.performClose(nil)
+                        if let monitorRef = monitor {
+                            NSEvent.removeMonitor(monitorRef)
+                            monitor = nil
+                        }
+                        return nil
+                    }
+                    return event
+                }
+                NotificationCenter.default.addObserver(
+                    forName: NSWindow.willCloseNotification,
+                    object: aboutWindow,
+                    queue: .main
+                ) { _ in
+                    if let monitorRef = monitor {
+                        NSEvent.removeMonitor(monitorRef)
+                        monitor = nil
+                    }
+                }
+
+             }
+
         case .quitHeliport:
             NSApp.terminate(nil)
         default:
