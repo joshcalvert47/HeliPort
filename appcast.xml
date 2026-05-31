@@ -4,35 +4,21 @@
         <title>HeliPort</title>
         <item>
             <title>2.4</title>
-            <pubDate>Thu, 28 May 2026 20:38:27 +0000</pubDate>
+            <pubDate>Sun, 31 May 2026 09:59:34 +0000</pubDate>
             <description><![CDATA[
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/19.4.0/primer.min.css"><meta charset="UTF-8">
                 <div class="markdown-body">
                     <h3>The latest updates are:</h3>
                     <ul>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/85f0f0d18dcc91726a61a4764f04bd8fa3ac3a42"><tt>85f0f0d</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/4b63a86f755117d6a637e061c00112df55804563"><tt>4b63a86</tt></a> Update README.md</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/46ec53df2db98e8cf51dc080056e8b2ae7556058"><tt>46ec53d</tt></a> Update project.pbxproj</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1d76be198f3749d0178eadde9b7c973e1bbf4cf6"><tt>1d76be1</tt></a> Merge pull request #3 from perez987/master</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/f3f299c2d82a14ab817b034c25143df2fe052a14"><tt>f3f299c</tt></a> Localize dashboard labels &amp; fix toggle state</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/03338f7a4d7dccfad91a2c68b2fe556fc0da50b2"><tt>03338f7</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/411b35667183707a11898f345139b72148a0ecc1"><tt>411b356</tt></a> Merge pull request #1 from 5T33Z0/master</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1b03608064dc9a93dc117ca5cf3c55d1200174c7"><tt>1b03608</tt></a> chore: update appcast.xml [skip ci]</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/730967b2f031e19ff518ace87565c2ddd2ce3ae2"><tt>730967b</tt></a> Merge branch &apos;master&apos; into master</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/3699afd4e46fb755659fffaed2997d73e8ff1946"><tt>3699afd</tt></a> Merge pull request #2 from perez987/master</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/da942ce05cf906d8a6516404ef8a0f1c5e7b898f"><tt>da942ce</tt></a> Prevent technical dashboard clipping in status menu</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/c96a2033ab26cdd71af05556407e6f907f1e0d79"><tt>c96a203</tt></a> Fix Spanish localization not applied in Debug tab</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/0df9fa06454f17fd4c5dd162ab218f2e31f549d0"><tt>0df9fa0</tt></a> Fix Spanish translation typos</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/55d311f9eb5557db739d16eb4e1d7d181ba99f35"><tt>55d311f</tt></a> Modernize APIs and clean up Swift/C code</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/59e0d35fac825b70b7ce49c74873f49d4bc0f098"><tt>59e0d35</tt></a> Update Spanish localized strings adding missing strings</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/61870def542f6d252d4ccce99e5e7d4136ee73bf"><tt>61870de</tt></a> Fix typos in Spanish localization strings</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/4ebb3a57e600ec57dc94ee9f544acf47ec1f4f5a"><tt>4ebb3a5</tt></a> Complete Spanish localizations</li>
-                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/0cfc1bdf5b6c328c6b3e1a4f02770f2be61e4740"><tt>0cfc1bd</tt></a> Fix Wi-Fi toggle not updating visually when disabled</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/ed305a05837493309c9b89c33ecc1cb9ca6b0b5d"><tt>ed305a0</tt></a> Merge pull request #4 from perez987/master</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1a1567c0b5f258803c0a235eff502a09c8b51991"><tt>1a1567c</tt></a> Add localized Credits.rtf and update project</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/7d2d57a0b95498219359d52a577b8a7e057ae20f"><tt>7d2d57a</tt></a> Update config and prefs window widths</li>
+                    <li><a class="commit-link" href="https://github.com/bigj42/heliport/commit/1d7fd7b926c9c1de22f9e8599079acd706a8bf03"><tt>1d7fd7b</tt></a> Update prefs window, app icons, and UI icons</li>
                     </ul>
                 </div>
             ]]></description>
             <sparkle:minimumSystemVersion>11.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.4/HeliPort.dmg" sparkle:version="2.4-85f0f0d" sparkle:shortVersionString="2.4" type="application/octet-stream" sparkle:edSignature="ADg2FIe+TxBjta+rwpl+z3fan8ooEnoSRXu0+Uavu16q1LIVEIzRyOGkyF8n+rgRXztRoaj6iELgYY+8GCLADA==" length="1808937"/>
+            <enclosure url="https://github.com/bigj42/heliport/releases/download/v2.4-alpha/HeliPort.dmg" sparkle:version="2.4-ed305a0" sparkle:shortVersionString="2.4" type="application/octet-stream" sparkle:edSignature="FaLQbqFG3F372BzV8iakjCyhaMqdeMkeTIhx7FWBNhaehLxCBdBWrRwYUTs47QTaQcT8JhHpvNAs5lMgGfTHDw==" length="2081631"/>
         </item>
     </channel>
 </rss>
